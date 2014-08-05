@@ -1,0 +1,123 @@
+/* ~~~~~~~~~ Water - Fluid CSS Response ~~~~~~~~~ */
+// Logo = ~ /* ~~~~~~~~~ Water */
+
+/* Full Spectrum Device Support....will add >2000px wide settings when I have a monitor to test on... */
+
+// Tiny Palm = <= 319px = 319px <
+// Baseline = 320px < 359px = <--(Your default css should be created for this resolution)
+// Palm = > 360px < 479px 
+// Break-0-landscape = > 560px
+// Large Palm = > 480px < 640px  
+// Break-1-landscape = > 768px 
+// Tiny-Lap = > 641px < 767px 
+// Lap = > 768px < 959px 
+// Break-2-landscape = > 1024px
+// Large Lap = > 960px < 1152px 
+// Desk = > 1553px < 1440px 
+// Large Desk = > 1441px
+
+@mixin respond-to($media) {
+	@if $media == tiny-palm {
+		@media only screen and (max-width: $tiny-palm-max-width) and (orientation: portrait) { @content; }
+	}
+	@if $media == palm {
+		@media only screen and (min-width: $palm-min-width) and (max-width: $palm-max-width) and (orientation: portrait) { @content; }
+	}
+	@else if $media == break-0-landscape {
+		@media only screen and (max-height: $break-0-max-height) and (min-width: $break-0-landscape) and (orientation: landscape) { @content; }
+	}
+	@else if $media == lrg-palm {
+		@media only screen and (min-width: $lrg-palm-min-width) and (max-width: $lrg-palm-max-width) and (orientation: portrait) { @content; }
+	}
+	@else if $media == iPhone5 {
+		@media only screen and (min-device-height : 568px) and (min-device-pixel-ratio : 2) { @content; }
+	}
+	@else if $media == break-1-landscape {
+		@media only screen and (max-height: $break-1-max-height) and (min-width: $break-1-landscape) and (orientation: landscape) { @content; }
+	}
+	@else if $media == tiny-lap {
+		@media only screen and (min-width: $tiny-lap-min-width) and (max-width: $tiny-lap-max-width) and (orientation: portrait) { @content; }		
+	}
+	@else if $media == lap {
+		@media only screen and (min-width: $lap-min-width) and (max-width: $lap-max-width) { @content; }		
+	}
+	@else if $media == break-2-landscape {
+		@media only screen and (min-width: $break-2-landscape) and (orientation: landscape) { @content; }		
+	}
+	@else if $media == lrg-lap {
+		@media only screen and (min-width: $lrg-lap-min-width) and (max-width: $lrg-lap-max-width) { @content; }		
+	}
+	@else if $media == desk {
+		@media only screen and (min-width: $desk-min-width) and (max-width: $desk-max-width) { @content; }
+	}
+	@else if $media == lrg-desk {
+		@media only screen and (min-width: $lrg-desk-min-width) and (max-width: $desk-max-width) { @content; }
+	}
+	@else if $media == xlrg-desk {
+		@media only screen and (min-width: $xlrg-desk-min-width) { @content; }
+	}
+
+}
+
+
+/* Considering switching to a function if more efficient */
+$device-size: 1px;
+
+
+@function rsp($device-type) {
+	@if $device-type == device-size {
+		@return $device-size;
+	}
+	@while $device-type == device-size {
+	}
+}
+
+/* Spec definition: 
+
+			Values listed are device-width in inches
+
+	Tiny-Palm-Default : < 3.5in [ tiny/small smartphone ]
+	Baseline          : 3.5 -4in [ iPhone ]
+	Palm              : 4in - 5in [ med/large smartphone, <= Galaxy S4,]
+	lrg-Palm          : 5in+ - 6.7in [ Galaxy Note, small tablets ]
+	Tiny-Lap          : 6.7in+ - 8in [ iPad mini, med-size tablets ]
+	Lap               : 8in+ - 10in [ iPad, large tablets, small netbooks]
+	lrg-Lap           : 10in+ - 12in [ lrg-tablets, reg-size netbooks]
+	Desk              : 12+in - 15in [ laptops w/ desk-use ]
+	lrg-Desk          : 15in+ [ lrg desk device ]
+
+*/
+
+/* How to use water:
+
+.column__0 {
+	float: left;
+	width: 97.534%;
+	@include respond-to(palm-landscape) { width: 98.232% }
+	@include respond-to(lap) { width: 66.333% }
+	@include respond-to(lap-landscape) { width: 72.843% }
+	@include respond-to(desk) { width: 55.324% }
+}
+
+ */
+
+/* ~~~~~~~~~ Fluid Media */
+
+img {
+	max-width: 100%;
+}
+
+iframe {
+	max-width: 100%;
+}
+
+video {
+	max-width: 100%;
+}
+
+
+/* ~~~~~~~~~ 2x */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5){}

@@ -3,228 +3,428 @@
 *** Paint
 **
 */
-/* HTML5 Boilerplate  What follows is the result of much research on cross-browser styling. Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal, Kroc Camen, and the H5BP dev community and team. */
-/* ========================================================================== Base styles: opinionated defaults ========================================================================== */
-html, button, input, select, textarea { color: #222; }
+/*  Options  
+*
+*
+*/
+/*  Colors 
+*/
+/*  Global Colors  */
+/*  Base Font Family  */
+/*  Water 
+*/
+/* We can just use layouts from say lrg-lap for lrg-palm landscape that
+way we don't need to device test for those widths... */
+/*  Import Fonts 
+*/
+/*  !Link fonts in for production!  */
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:500);
+@font-face { font-family: OldSansBlack; src: url(../assets/OldSansBlack.ttf); font-weight: 400; }
+/*! normalize.css v2.1.3 | MIT License | git.io/normalize */
+/* ========================================================================== HTML5 display definitions ========================================================================== */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { font: inherit; vertical-align: baseline; }
 
-body { font-size: 1em; line-height: 1.4; }
+/*  Studio Addition  */
+/** Correct `block` display not defined in IE 8/9. */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary { display: block; }
 
-a { color: #00e; }
+/** Correct `inline-block` display not defined in IE 8/9. */
+audio, canvas, video { display: inline-block; }
 
-a:visited { color: #551a8b; }
+/** Prevent modern browsers from displaying `audio` without controls. Remove excess height in iOS 5 devices. */
+audio:not([controls]) { display: none; height: 0; }
 
-a:hover { color: #06e; }
+/** Address `[hidden]` styling not present in IE 8/9. Hide the `template` element in IE, Safari, and Firefox < 22. */
+[hidden], template { display: none; }
 
-/* Remove the gap between images and the bottom of their containers: h5bp.com/i/440 */
-img { vertical-align: middle; }
-
-/* Remove default fieldset styles. */
-fieldset { margin: 0; padding: 0; border: 0; }
-
-/* Allow only vertical resizing of textareas. */
-textarea { resize: vertical; }
-
-/* ========================================================================== Author's custom styles ========================================================================== */
-/* ========================================================================== Helper classes ========================================================================== */
-/* Prevent callout */
-.nocallout { -webkit-touch-callout: none; }
-
-.pressed { background-color: rgba(0, 0, 0, 0.7); }
-
-/* A hack for HTML5 contenteditable attribute on mobile */
-textarea[contenteditable] { -webkit-appearance: none; }
-
-/* A workaround for S60 3.x and 5.0 devices which do not animated gif images if they have been set as display: none */
-.gifhidden { position: absolute; left: -100%; }
-
-/* Image replacement */
-.ir { display: block; overflow: hidden; border: 0; background-color: transparent; background-repeat: no-repeat; text-align: left; text-indent: -999em; direction: ltr; }
-
-.ir br { display: none; }
-
-/* Hide from both screenreaders and browsers: h5bp.com/u */
-.hidden { display: none !important; visibility: hidden; }
-
-/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
-.visuallyhidden { position: absolute; overflow: hidden; clip: rect(0 0 0 0); margin: -1px; padding: 0; width: 1px; height: 1px; border: 0; }
-
-/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
-.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { position: static; overflow: visible; clip: auto; margin: 0; width: auto; height: auto; }
-
-/* Hide visually and from screenreaders, but maintain layout */
-.invisible { visibility: hidden; }
-
-/** Clearfix helper Used to contain floats: h5bp.com/q */
-.clearfix::before, .clearfix::after { display: table; content: ""; }
-
-.clearfix::after { clear: both; }
-
-/* ========================================================================== EXAMPLE Media Queries for Responsive Design. Theses examples override the primary ('mobile first') styles. Modify as content requires. ========================================================================== */
-@media only screen and (min-width: 800px) { /* Style adjustments for viewports that meet the condition */ }
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) { /* Style adjustments for viewports that meet the condition */ }
-/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+/* ========================================================================== Base ========================================================================== */
 /** 1. Set default font family to sans-serif. 2. Prevent iOS text size adjust after orientation change, without disabling user zoom. */
 html { font-family: sans-serif; /* 1 */ -ms-text-size-adjust: 100%; /* 2 */ -webkit-text-size-adjust: 100%; /* 2 */ }
 
 /** Remove default margin. */
 body { margin: 0; }
 
-/* HTML5 display definitions ========================================================================== */
-/** Correct `block` display not defined for any HTML5 element in IE 8/9. Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox. Correct `block` display not defined for `main` in IE 11. */
-article, aside, details, figcaption, figure, footer, header, main, nav, section, summary { display: block; }
-
-/** 1. Correct `inline-block` display not defined in IE 8/9. 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera. */
-audio, canvas, progress, video { display: inline-block; /* 1 */ vertical-align: baseline; /* 2 */ }
-
-/** Prevent modern browsers from displaying `audio` without controls. Remove excess height in iOS 5 devices. */
-audio:not([controls]) { display: none; height: 0; }
-
-/** Address `[hidden]` styling not present in IE 8/9/10. Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22. */
-[hidden], template { display: none; }
-
-/* Links ========================================================================== */
+/* ========================================================================== Links ========================================================================== */
 /** Remove the gray background color from active links in IE 10. */
 a { background: transparent; }
+
+/** Address `outline` inconsistency between Chrome and other browsers. */
+a:focus { outline: thin dotted; }
 
 /** Improve readability when focused and also mouse hovered in all browsers. */
 a:active, a:hover { outline: 0; }
 
-/* Text-level semantics ========================================================================== */
-/** Address styling not present in IE 8/9/10/11, Safari, and Chrome. */
+/* ========================================================================== Typography ========================================================================== */
+/** Address variable `h1` font-size and margin within `section` and `article` contexts in Firefox 4+, Safari 5, and Chrome. */
+h1 { font-size: 2em; margin: 0.67em 0; }
+
+/** Address styling not present in IE 8/9, Safari 5, and Chrome. */
 abbr[title] { border-bottom: 1px dotted; }
 
-/** Address style set to `bolder` in Firefox 4+, Safari, and Chrome. */
+/** Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome. */
 b, strong { font-weight: bold; }
 
-/** Address styling not present in Safari and Chrome. */
+/** Address styling not present in Safari 5 and Chrome. */
 dfn { font-style: italic; }
+
+/** Address differences between Firefox and other browsers. */
+hr { -moz-box-sizing: content-box; box-sizing: content-box; height: 0; }
 
 /** Address styling not present in IE 8/9. */
 mark { background: #ff0; color: #000; }
 
+/** Correct font family set oddly in Safari 5 and Chrome. */
+code, kbd, pre, samp { font-family: monospace, serif; font-size: 1em; }
+
+/** Improve readability of pre-formatted text in all browsers. */
+pre { white-space: pre-wrap; }
+
+/** Set consistent quote types. */
+q { quotes: "\201C" "\201D" "\2018" "\2019"; }
+
+/** Address inconsistent and variable font size in all browsers. */
+small { font-size: 80%; }
+
 /** Prevent `sub` and `sup` affecting `line-height` in all browsers. */
-sub, sup { position: relative; vertical-align: baseline; font-size: 75%; line-height: 0; }
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
 
 sup { top: -0.5em; }
 
 sub { bottom: -0.25em; }
 
-/* Embedded content ========================================================================== */
-/** Remove border when inside `a` element in IE 8/9/10. */
+/* ========================================================================== Embedded content ========================================================================== */
+/** Remove border when inside `a` element in IE 8/9. */
 img { border: 0; }
 
-/** Correct overflow not hidden in IE 9/10/11. */
+/** Correct overflow displayed oddly in IE 9. */
 svg:not(:root) { overflow: hidden; }
 
-/* Grouping content ========================================================================== */
-/** Remove margin */
+/* ========================================================================== Figures ========================================================================== */
+/** Address margin not present in IE 8/9 and Safari 5. */
 figure { margin: 0; }
 
-/** Address differences between Firefox and other browsers. */
-hr { -moz-box-sizing: content-box; box-sizing: content-box; height: 0; }
+/* ========================================================================== Forms ========================================================================== */
+/** Define consistent border, margin, and padding. */
+fieldset { border: 1px solid #c0c0c0; margin: 0 2px; padding: 0.35em 0.625em 0.75em; }
 
-/** Contain overflow in all browsers. */
-pre { overflow: auto; }
+/** 1. Correct `color` not being inherited in IE 8/9. 2. Remove padding so people aren't caught out if they zero out fieldsets. */
+legend { border: 0; /* 1 */ padding: 0; /* 2 */ }
 
-/** Address odd `em`-unit font size rendering in all browsers. */
-code, kbd, pre, samp { font-size: 1em; font-family: monospace, monospace; }
+/** 1. Correct font family not being inherited in all browsers. 2. Correct font size not being inherited in all browsers. 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome. */
+button, input, select, textarea { font-family: inherit; /* 1 */ font-size: 100%; /* 2 */ margin: 0; /* 3 */ }
 
-/* Forms ========================================================================== */
-/** Known limitation: by default, Chrome and Safari on OS X allow very limited styling of `select`, unless a `border` property is set. */
-/** 1. Correct color not being inherited. Known issue: affects color of disabled elements. 2. Correct font properties not being inherited. 3. Address margins set differently in Firefox 4+, Safari, and Chrome. */
-button, input, optgroup, select, textarea { margin: 0; /* 3 */ color: inherit; /* 1 */ font: inherit; /* 2 */ }
+/** Address Firefox 4+ setting `line-height` on `input` using `!important` in the UA stylesheet. */
+button, input { line-height: normal; }
 
-/** Address `overflow` set to `hidden` in IE 8/9/10/11. */
-button { overflow: visible; }
-
-/** Address inconsistent `text-transform` inheritance for `button` and `select`. All other form control elements do not inherit `text-transform` values. Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera. Correct `select` style inheritance in Firefox. */
+/** Address inconsistent `text-transform` inheritance for `button` and `select`. All other form control elements do not inherit `text-transform` values. Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+. Correct `select` style inheritance in Firefox 4+ and Opera. */
 button, select { text-transform: none; }
 
 /** 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio` and `video` controls. 2. Correct inability to style clickable `input` types in iOS. 3. Improve usability and consistency of cursor style between image-type `input` and others. */
-button, html input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; /* 3 */ -webkit-appearance: button; /* 2 */ }
+button, html input[type="button"], input[type="reset"], input[type="submit"] { -webkit-appearance: button; /* 2 */ cursor: pointer; /* 3 */ }
 
 /** Re-set default cursor for disabled elements. */
 button[disabled], html input[disabled] { cursor: default; }
 
-/** Remove inner padding and border in Firefox 4+. */
-button::-moz-focus-inner, input::-moz-focus-inner { padding: 0; border: 0; }
-
-/** Address Firefox 4+ setting `line-height` on `input` using `!important` in the UA stylesheet. */
-input { line-height: normal; }
-
-/** It's recommended that you don't attempt to style these elements. Firefox's implementation doesn't respect box-sizing, padding, or width.  1. Address box sizing set to `content-box` in IE 8/9/10. 2. Remove excess padding in IE 8/9/10. */
+/** 1. Address box sizing set to `content-box` in IE 8/9/10. 2. Remove excess padding in IE 8/9/10. */
 input[type="checkbox"], input[type="radio"] { box-sizing: border-box; /* 1 */ padding: 0; /* 2 */ }
 
-/** Fix the cursor style for Chrome's increment/decrement buttons. For certain `font-size` values of the `input`, it causes the cursor style of the decrement button to change from `default` to `text`. */
-input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button { height: auto; }
+/** 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome. 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome (include `-moz` to future-proof). */
+input[type="search"] { -webkit-appearance: textfield; /* 1 */ -moz-box-sizing: content-box; -webkit-box-sizing: content-box; /* 2 */ box-sizing: content-box; }
 
-/** 1. Address `appearance` set to `searchfield` in Safari and Chrome. 2. Address `box-sizing` set to `border-box` in Safari and Chrome (include `-moz` to future-proof). */
-input[type="search"] { -webkit-box-sizing: content-box; /* 2 */ -moz-box-sizing: content-box; box-sizing: content-box; -webkit-appearance: textfield; /* 1 */ }
-
-/** Remove inner padding and search cancel button in Safari and Chrome on OS X. Safari (but not Chrome) clips the cancel button when the search input has padding (and `textfield` appearance). */
+/** Remove inner padding and search cancel button in Safari 5 and Chrome on OS X. */
 input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
 
-/** 1. Correct `color` not being inherited in IE 8/9/10/11. 2. Remove padding so people aren't caught out if they zero out fieldsets. */
-legend { padding: 0; /* 2 */ border: 0; /* 1 */ }
+/** Remove inner padding and border in Firefox 4+. */
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
 
-/** Remove default vertical scrollbar in IE 8/9/10/11. */
-textarea { overflow: auto; }
+/** 1. Remove default vertical scrollbar in IE 8/9. 2. Improve readability and alignment in all browsers. */
+textarea { overflow: auto; /* 1 */ vertical-align: top; /* 2 */ }
 
-/** Don't inherit the `font-weight` (applied by a rule above). NOTE: the default cannot safely be changed in Chrome and Safari on OS X. */
-optgroup { font-weight: bold; }
-
-/* Tables ========================================================================== */
+/* ========================================================================== Tables ========================================================================== */
 /** Remove most spacing between table cells. */
-table { border-spacing: 0; border-collapse: collapse; }
+table { border-collapse: collapse; border-spacing: 0; }
 
-td, th { padding: 0; }
+/*  Utility's */
+/*  Background */
+/* Grammer:[ <angle> | <side-or-corner>,] <color-stop> [, <color-stop>]+ */
+/*  Grid */
+/*  Indicators */
+/*  Helpers */
+/*  Font Utility's */
+/* Pass a number to font size in rem + px fallback '1 = 10px' */
+/* Override situation */
+/*  Text Shadow Styles  */
+/* Pass custom $xxxx-text-inset & define in options */
+/* Canvas purpose is to add semantics to your stylesheets */
+/* Canvas
+*/
+*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
-/* Blockquote ========================================================================== */
-blockquote { margin: 0; }
+  /* When we set a width, that element stays that width, despite padding 
+or borders being applied */
+/* Boxes 
+*/
+  /* Use boxes as grid/layout structures for semantic css, layout 
+structures can now be easily identified in your stylesheets */
+/* Use gutters for semantics & consistent padding in your layout structures */
+/* Clearing Context 
+*/
+/* Clear with readability */
+/* %%%%%%%%% Usage %%%%%%%%%   	header { 		... 		@include box( 600px, 300px, 0 auto ); 	}
+ 	aside { 		... 		@include clear-left(); 		@include box( 200px, 800px, 0) 	}
+ 	.column__0 { 	    ...  		@include box();  		@include gutters(); }
 
-/*
-**
-*** Global
-**
-*/
-/*
-**
-*** Icons
-**
-*/
-/*
-**
-*** Grid
-**
-*/
-/*
-**
-*** Typography 
-**
-*/
-h1, h2, h3, h4, h5, p { margin: 0; }
+	.column__1 {
+	    ... 
+		@include box(); 
+		@include gutters(); }
 
-/*
-**
-*** List
-**
-*/
-/*
-**
-*** Link
-**
-*/
-a { color: inherit; }
+	.column__2 {
+	    ... 
+		@include box(); 
+		@include gutters(); }
+ %%%%%%%%%%%%%%%%%%%%%%%%% */
+/* ~~~~~~~~~ Water - Fluid CSS Response ~~~~~~~~~ */
+/* Full Spectrum Device Support....will add >2000px wide settings when I have a monitor to test on... */
+/* Considering switching to a function if more efficient */
+/* Spec definition: 
 
-a:hover { text-decoration: none; }
+			Values listed are device-width in inches
 
-/**
+	Tiny-Palm-Default : < 3.5in [ tiny/small smartphone ]
+	Baseline          : 3.5 -4in [ iPhone ]
+	Palm              : 4in - 5in [ med/large smartphone, <= Galaxy S4,]
+	lrg-Palm          : 5in+ - 6.7in [ Galaxy Note, small tablets ]
+	Tiny-Lap          : 6.7in+ - 8in [ iPad mini, med-size tablets ]
+	Lap               : 8in+ - 10in [ iPad, large tablets, small netbooks]
+	lrg-Lap           : 10in+ - 12in [ lrg-tablets, reg-size netbooks]
+	Desk              : 12+in - 15in [ laptops w/ desk-use ]
+	lrg-Desk          : 15in+ [ lrg desk device ]
+
+*/
+/* How to use water:
+
+.column__0 {
+	float: left;
+	width: 97.534%;
+	@include respond-to(palm-landscape) { width: 98.232% }
+	@include respond-to(lap) { width: 66.333% }
+	@include respond-to(lap-landscape) { width: 72.843% }
+	@include respond-to(desk) { width: 55.324% }
+}
+ */
+/* ~~~~~~~~~ Fluid Media */
+img { max-width: 100%; }
+
+iframe { max-width: 100%; }
+
+video { max-width: 100%; }
+
+/* ~~~~~~~~~ 2x */
+/* Elements 
 *
-* Media - imgs/videos
 *
-**/
-img, video, object { max-width: 100%; }
+*/
+/* @TODO learn how to use :after :before line-height */
+/* Canvas 
+*/
+html, body { height: 100%; }
 
+body { font-size: 62.5%; font-weight: normal; font-family: "Ubuntu", sans-serif; /* 62.5% Baseline */ color: #272220; overflow: hidden; text-shadow: 0px 1px 0px #e5e5ee; background-color: #efead4; background-image: -webkit-gradient(linear, left top, left bottom, from(#efead4), to("")); /* Chrome, Safari 4+ */ background-image: -webkit-linear-gradient(top, #efead4, ""); /* Chrome 10-25, iOS 5+, Safari 5.1+ */ background-image: -moz-linear-gradient(top, #efead4, ""); /* Firefox 3.6-15 */ background-image: -o-linear-gradient(top, #efead4, ""); /* Opera 11.10-12.00 */ background-image: linear-gradient(top bottom, #efead4, ""); /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */ }
+
+.canvas { width: 100%; min-height: 100%; height: auto !important; height: 100%; margin: 0 auto -300px; }
+
+/* Background
+*/
+.skimaskbg { height: 100%; width: 100%; background: url("../assets/skimaskbg.jpg") no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+
+/* JS Related
+*/
+.hide { display: none; }
+
+.tan-bg { background-color: #efead4; background-image: -webkit-gradient(linear, left top, left bottom, from(#efead4), to("")); /* Chrome, Safari 4+ */ background-image: -webkit-linear-gradient(top, #efead4, ""); /* Chrome 10-25, iOS 5+, Safari 5.1+ */ background-image: -moz-linear-gradient(top, #efead4, ""); /* Firefox 3.6-15 */ background-image: -o-linear-gradient(top, #efead4, ""); /* Opera 11.10-12.00 */ background-image: linear-gradient(top bottom, #efead4, ""); /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */ width: 100%; height: 100%; }
+
+/* Lootmob H1
+*/
+.lootmob { padding-top: 25px; /* Used to control overall vert position of body contents after skimaskbg click */ margin: 0 0 20px; text-shadow: 0px 1px 0px #e5e5ee; font-size: 46.4px; font-size: 2.9rem; font-family: "OldSansBlack"; text-align: center; }
+
+/* Buy it now wrap
+*/
+.buyitnow__wrap { margin: 0 auto 15px; width: 210px; height: 280px; }
+
+.buyitnow__title { font-size: 52.8px; font-size: 3.3rem; margin: 0; font-family: "Franchise"; }
+
+.buyitnow__sub-title { font-size: 16px; font-size: 1rem; margin: 15px 0 15px; }
+
+.buyitnow__title, .buyitnow__sub-title { text-align: center; }
+
+.lovehurtstee_img { margin: 0 auto 20px; background: url("../assets/lovehurtstee_150.jpg"); width: 150px; height: 150px; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; /* future proofing */ -khtml-border-radius: 4px; /* for old Konqueror browsers */ }
+
+.price__flag { font-size: 24px; font-size: 1.5rem; margin: 0 0 0 5px; float: left; width: 100px; }
+
+.buyitnow__button { margin: 0 0 20px; font-size: 32px; font-size: 2rem; float: right; }
+
+.paypal__button { width: 100px; }
+
+.line { border: none; color: white; width: 100%; height: 1px; background: black; background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 100, from(black), to(#efead4)); }
+
+.line1 { clear: both; border: none; color: white; width: 100%; height: 1px; background: black; background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 100, from(black), to(#efead4)); }
+
+/* Her 
+*/
+.her-wrap { margin: -420px auto 0; width: 210px; height: 600px; }
+
+.her { width: 210px; height: 300px; }
+
+.her-wrap, .push { height: 300px; }
+
+/* Footer 
+*/
+.footer { text-align: center; }
+
+.fa { color: #272220; margin: 0 0 20px; }
+
+.fa-envelope { margin-left: 20px; }
+
+.copyright { margin: 0; font-size: 13.6px; font-size: 0.85rem; }
+
+/* Water - Response System */
+@media only screen and (max-height: 450px) and (min-width: 560px) and (orientation: landscape) { .lootmob { float: left; }
+  .footer { margin-bottom: 40px; }
+  .lootmob { padding-top: 40px; } }
+@media only screen and (max-height: 650px) and (min-width: 768px) and (orientation: landscape) { .lootmob { float: left; }
+  .footer { margin-bottom: 75px; } }
+@media only screen and (min-width: 400px) and (orientation: landscape) { .overflow-vis { overflow: visible; } }
+@media only screen and (max-width: 319px) and (orientation: portrait) { .overflow-vis { overflow: visible; } }
+@media only screen and (min-device-height: 568px) and (min-device-pixel-ratio: 2) { .her-wrap, .push { height: 350px; }
+  .her-wrap { margin: -476px auto 0; width: 210px; height: 600px; }
+  .her { width: 210px; height: 350px; }
+  .lootmob { padding-top: 70px; } }
+@media only screen and (min-width: 360px) and (max-width: 479px) and (orientation: portrait) { .her-wrap, .push { height: 400px; }
+  .her-wrap { margin: -556px auto 0; width: 210px; height: 600px; }
+  .her { width: 210px; height: 400px; }
+  .lootmob { padding-top: 50px; margin-bottom: 20px; font-size: 48px; font-size: 3rem; }
+  .buyitnow__wrap { margin: 0 auto 20px; width: 266px; height: 347px; }
+  .buyitnow__sub-title { font-size: 19.2px; font-size: 1.2rem; margin: 20px 0 20px; }
+  .lovehurtstee_img { margin: 0 auto 20px; background: url("../assets/lovehurtstee_200.jpg"); width: 200px; height: 200px; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; /* future proofing */ -khtml-border-radius: 4px; /* for old Konqueror browsers */ }
+  .buyitnow__button { margin: 0 0 20px; font-size: 32px; font-size: 2rem; float: right; }
+  .price__flag { font-size: 25.6px; font-size: 1.6rem; padding-left: 20px; margin: 0 0 0 5px; float: left; width: 100px; }
+  .paypal__button { width: 125px; }
+  .line { border: none; color: white; width: 100%; height: 1px; background: black; background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 135, from(black), to(#efead4)); }
+  .line1 { clear: both; border: none; color: white; width: 100%; height: 1px; background: black; background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 135, from(black), to(#efead4)); }
+  .copyright { margin: 0; font-size: 14.4px; font-size: 0.9rem; } }
+@media only screen and (max-height: 450px) and (min-width: 560px) and (orientation: landscape) { .lootmob { padding-top: 35px; } }
+@media only screen and (min-width: 480px) and (max-width: 580px) and (orientation: portrait) { .her-wrap, .push { height: 400px; }
+  .her-wrap { margin: -556px auto 0; width: 210px; height: 600px; }
+  .her { width: 210px; height: 400px; }
+  .lootmob { padding-top: 55px; margin-bottom: 40px; font-size: 57.6px; font-size: 3.6rem; }
+  .buyitnow__wrap { margin: 0 auto 40px; width: 350px; height: 471px; }
+  .buyitnow__sub-title { font-size: 22.4px; font-size: 1.4rem; margin: 30px 0 30px; }
+  .lovehurtstee_img { margin: 0 auto 30px; background: url("../assets/lovehurtstee_275.jpg"); width: 275px; height: 275px; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; /* future proofing */ -khtml-border-radius: 4px; /* for old Konqueror browsers */ }
+  .buyitnow__button { margin: 0 0 30px; font-size: 32px; font-size: 2rem; float: right; }
+  .price__flag { font-size: 32px; font-size: 2rem; padding-left: 20px; margin: 0 0 0 5px; float: left; width: 100px; }
+  .paypal__button { width: 150px; }
+  .line { border: none; color: white; width: 100%; height: 1px; background: black; background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 170, from(black), to(#efead4)); }
+  .line1 { clear: both; border: none; color: white; width: 100%; height: 1px; background: black; background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 170, from(black), to(#efead4)); }
+  .copyright { margin: 0; font-size: 14.4px; font-size: 0.9rem; } }
+@media only screen and (max-height: 650px) and (min-width: 768px) and (orientation: landscape) { .lootmob { padding-top: 55px; margin-bottom: 40px; font-size: 57.6px; font-size: 3.6rem; }
+  .buyitnow__wrap { margin: 0 auto 40px; width: 350px; height: 471px; }
+  .buyitnow__sub-title { font-size: 22.4px; font-size: 1.4rem; margin: 30px 0 30px; }
+  .lovehurtstee_img { margin: 0 auto 30px; background: url("../assets/lovehurtstee_275.jpg"); width: 275px; height: 275px; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; /* future proofing */ -khtml-border-radius: 4px; /* for old Konqueror browsers */ }
+  .buyitnow__button { margin: 0 0 30px; font-size: 32px; font-size: 2rem; float: right; }
+  .price__flag { font-size: 32px; font-size: 2rem; padding-left: 20px; margin: 0 0 0 5px; float: left; width: 100px; }
+  .paypal__button { width: 150px; }
+  .line { border: none; color: white; width: 100%; height: 1px; background: black; background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 170, from(black), to(#efead4)); }
+  .line1 { clear: both; border: none; color: white; width: 100%; height: 1px; background: black; background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 170, from(black), to(#efead4)); }
+  .copyright { margin: 0; font-size: 14.4px; font-size: 0.9rem; } }
+@media only screen and (min-width: 581px) and (max-width: 767px) and (orientation: portrait) { .her-wrap, .push { height: 590px; }
+  .her-wrap { margin: -846px auto 0; width: 210px; height: 590px; }
+  .her { width: 210px; height: 590px; }
+  .lootmob { padding-top: 95px; margin-bottom: 30px; font-size: 73.6px; font-size: 4.6rem; }
+  .buyitnow__wrap { margin: 0 auto 30px; width: 447px; height: 502px; }
+  .buyitnow__sub-title { font-size: 23.2px; font-size: 1.45rem; margin: 30px 0 30px; }
+  .lovehurtstee_img { margin: 0 auto 30px; background: url("../assets/lovehurtstee_300.jpg"); width: 300px; height: 300px; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; /* future proofing */ -khtml-border-radius: 4px; /* for old Konqueror browsers */ }
+  .buyitnow__button { margin: 0 0 30px; font-size: 35.2px; font-size: 2.2rem; float: right; }
+  .price__flag { font-size: 32px; font-size: 2rem; padding-left: 60px; margin: 0 0 0 5px; float: left; width: 100px; }
+  .paypal__button { width: 190px; padding-right: 30px; }
+  .line { border: none; color: white; width: 100%; height: 1px; background: black; background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 230, from(black), to(#efead4)); }
+  .line1 { clear: both; border: none; color: white; width: 100%; height: 1px; background: black; background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 230, from(black), to(#efead4)); }
+  .copyright { margin: 0; font-size: 14.4px; font-size: 0.9rem; } }
+@media only screen and (min-width: 768px) and (max-width: 959px) { .her-wrap, .push { height: 630px; }
+  .her-wrap { margin: -876px auto 0; width: 210px; height: 630px; }
+  .her { width: 210px; height: 630px; }
+  .lootmob { padding-top: 115px; margin-bottom: 30px; font-size: 73.6px; font-size: 4.6rem; }
+  .buyitnow__wrap { margin: 0 auto 30px; width: 447px; height: 502px; }
+  .buyitnow__sub-title { font-size: 23.2px; font-size: 1.45rem; margin: 30px 0 30px; }
+  .lovehurtstee_img { margin: 0 auto 30px; background: url("../assets/lovehurtstee_300.jpg"); width: 300px; height: 300px; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; /* future proofing */ -khtml-border-radius: 4px; /* for old Konqueror browsers */ }
+  .buyitnow__button { margin: 0 0 30px; font-size: 35.2px; font-size: 2.2rem; float: right; }
+  .price__flag { font-size: 32px; font-size: 2rem; padding-left: 60px; margin: 0 0 0 5px; float: left; width: 100px; }
+  .paypal__button { width: 190px; padding-right: 30px; }
+  .line { border: none; color: white; width: 100%; height: 1px; background: black; background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 230, from(black), to(#efead4)); }
+  .line1 { clear: both; border: none; color: white; width: 100%; height: 1px; background: black; background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 230, from(black), to(#efead4)); }
+  .copyright { margin: 0; font-size: 14.4px; font-size: 0.9rem; } }
+@media only screen and (min-width: 1024px) and (orientation: landscape) { .lootmob { padding-top: 55px; margin-bottom: 40px; font-size: 73.6px; font-size: 4.6rem; }
+  .buyitnow__wrap { margin: 0 auto 40px; width: 350px; height: 471px; }
+  .buyitnow__sub-title { font-size: 22.4px; font-size: 1.4rem; margin: 30px 0 30px; }
+  .lovehurtstee_img { margin: 0 auto 30px; background: url("../assets/lovehurtstee_300.jpg"); width: 275px; height: 275px; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; /* future proofing */ -khtml-border-radius: 4px; /* for old Konqueror browsers */ }
+  .buyitnow__button { margin: 0 0 30px; font-size: 32px; font-size: 2rem; float: right; }
+  .price__flag { font-size: 32px; font-size: 2rem; padding-left: 20px; margin: 0 0 0 5px; float: left; width: 100px; }
+  .paypal__button { width: 150px; }
+  .line { border: none; color: white; width: 100%; height: 1px; background: black; background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 170, from(black), to(#efead4)); }
+  .line1 { clear: both; border: none; color: white; width: 100%; height: 1px; background: black; background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 170, from(black), to(#efead4)); }
+  .copyright { margin: 0; font-size: 14.4px; font-size: 0.9rem; } }
+@media only screen and (min-width: 960px) and (max-width: 1152px) { .her-wrap, .push { height: 500px; }
+  .her-wrap { margin: -746px auto 0; width: 210px; height: 500px; }
+  .her { width: 210px; height: 500px; }
+  .lootmob { padding-top: 95px; margin-bottom: 30px; font-size: 73.6px; font-size: 4.6rem; }
+  .buyitnow__wrap { margin: 0 auto 30px; width: 447px; height: 502px; }
+  .buyitnow__sub-title { font-size: 23.2px; font-size: 1.45rem; margin: 30px 0 30px; }
+  .lovehurtstee_img { margin: 0 auto 30px; background: url("../assets/lovehurtstee_300.jpg"); width: 300px; height: 300px; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; /* future proofing */ -khtml-border-radius: 4px; /* for old Konqueror browsers */ }
+  .buyitnow__button { margin: 0 0 30px; font-size: 35.2px; font-size: 2.2rem; float: right; }
+  .price__flag { font-size: 32px; font-size: 2rem; padding-left: 60px; margin: 0 0 0 5px; float: left; width: 100px; }
+  .paypal__button { width: 190px; padding-right: 30px; }
+  .line { border: none; color: white; width: 100%; height: 1px; background: black; background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 230, from(black), to(#efead4)); }
+  .line1 { clear: both; border: none; color: white; width: 100%; height: 1px; background: black; background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 230, from(black), to(#efead4)); }
+  .copyright { margin: 0; font-size: 14.4px; font-size: 0.9rem; } }
+@media only screen and (min-width: 1153px) and (max-width: 1440px) { .her-wrap, .push { height: 640px; }
+  .her-wrap { margin: -896px auto 0; width: 210px; height: 640px; }
+  .her { width: 210px; height: 640px; }
+  .lootmob { padding-top: 95px; margin-bottom: 30px; font-size: 73.6px; font-size: 4.6rem; }
+  .buyitnow__wrap { margin: 0 auto 30px; width: 447px; height: 502px; }
+  .buyitnow__sub-title { font-size: 23.2px; font-size: 1.45rem; margin: 30px 0 30px; }
+  .lovehurtstee_img { margin: 0 auto 30px; background: url("../assets/lovehurtstee_300.jpg"); width: 300px; height: 300px; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; /* future proofing */ -khtml-border-radius: 4px; /* for old Konqueror browsers */ }
+  .buyitnow__button { margin: 0 0 30px; font-size: 35.2px; font-size: 2.2rem; float: right; }
+  .price__flag { font-size: 32px; font-size: 2rem; padding-left: 60px; margin: 0 0 0 5px; float: left; width: 100px; }
+  .paypal__button { width: 190px; padding-right: 30px; }
+  .line { border: none; color: white; width: 100%; height: 1px; background: black; background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 230, from(black), to(#efead4)); }
+  .line1 { clear: both; border: none; color: white; width: 100%; height: 1px; background: black; background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 230, from(black), to(#efead4)); }
+  .copyright { margin: 0; font-size: 14.4px; font-size: 0.9rem; } }
+@media only screen and (min-width: 1441px) and (max-width: 1440px) { .her-wrap, .push { height: 660px; }
+  .her-wrap { margin: -926px auto 0; width: 210px; height: 660px; }
+  .her { width: 210px; height: 660px; }
+  .lootmob { padding-top: 95px; margin-bottom: 30px; font-size: 73.6px; font-size: 4.6rem; }
+  .buyitnow__wrap { margin: 0 auto 30px; width: 447px; height: 502px; }
+  .buyitnow__sub-title { font-size: 23.2px; font-size: 1.45rem; margin: 30px 0 30px; }
+  .lovehurtstee_img { margin: 0 auto 30px; background: url("../assets/lovehurtstee_300.jpg"); width: 300px; height: 300px; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; /* future proofing */ -khtml-border-radius: 4px; /* for old Konqueror browsers */ }
+  .buyitnow__button { margin: 0 0 30px; font-size: 35.2px; font-size: 2.2rem; float: right; }
+  .price__flag { font-size: 32px; font-size: 2rem; padding-left: 60px; margin: 0 0 0 5px; float: left; width: 100px; }
+  .paypal__button { width: 190px; padding-right: 30px; }
+  .line { border: none; color: white; width: 100%; height: 1px; background: black; background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 230, from(black), to(#efead4)); }
+  .line1 { clear: both; border: none; color: white; width: 100%; height: 1px; background: black; background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 230, from(black), to(#efead4)); }
+  .copyright { margin: 0; font-size: 14.4px; font-size: 0.9rem; } }
+@media only screen and (min-width: 1922px) { .her-wrap, .push { height: 870px; }
+  .her-wrap { margin: -1146px auto 0; width: 210px; height: 870px; }
+  .her { width: 210px; height: 870px; }
+  .lootmob { padding-top: 95px; margin-bottom: 30px; font-size: 73.6px; font-size: 4.6rem; }
+  .buyitnow__wrap { margin: 0 auto 30px; width: 447px; height: 502px; }
+  .buyitnow__sub-title { font-size: 23.2px; font-size: 1.45rem; margin: 30px 0 30px; }
+  .lovehurtstee_img { margin: 0 auto 30px; background: url("../assets/lovehurtstee_300.jpg"); width: 300px; height: 300px; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; /* future proofing */ -khtml-border-radius: 4px; /* for old Konqueror browsers */ }
+  .buyitnow__button { margin: 0 0 30px; font-size: 35.2px; font-size: 2.2rem; float: right; }
+  .price__flag { font-size: 32px; font-size: 2rem; padding-left: 60px; margin: 0 0 0 5px; float: left; width: 100px; }
+  .paypal__button { width: 190px; padding-right: 30px; }
+  .line { border: none; color: white; width: 100%; height: 1px; background: black; background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 230, from(black), to(#efead4)); }
+  .line1 { clear: both; border: none; color: white; width: 100%; height: 1px; background: black; background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 230, from(black), to(#efead4)); }
+  .copyright { margin: 0; font-size: 14.4px; font-size: 0.9rem; } }
 /*# sourceMappingURL=paint.css.map */
 
 /*# sourceMappingURL=paint.css.map */
