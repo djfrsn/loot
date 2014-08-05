@@ -3,9 +3,9 @@
 /* Canvas
 */
 @mixin canvas( $canvas-width: 100%, $canvas-height: 100%, $canvas-margin: 0 ) {
+	margin: $canvas-margin;
 	width: $canvas-width;
 	height: $canvas-height;
-	margin: $canvas-margin;
 }
 
 *, *:after, *:before {
@@ -17,9 +17,9 @@ or borders being applied */
 */
 
 @mixin canvas-box( $canvas-box-width: 100%, $canvas-box-height: 100%, $canvas-box-margin: 0 ) {
+	margin: $canvas-box-margin;
 	width: $canvas-box-width;
 	height: $canvas-box-height;
-	margin: $canvas-box-margin;
 } /* Use boxes as grid/layout structures for semantic css, layout 
 structures can now be easily identified in your stylesheets */
 
