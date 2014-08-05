@@ -10,3 +10,5 @@ helper
 gulpfile.js
 app/lib/styles/critical.css.map
 app/lib/styles/critical.css
+app/lib/font/
+app/lib/img/
