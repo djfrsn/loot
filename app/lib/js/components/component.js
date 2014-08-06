@@ -1,14 +1,10 @@
 (function( $ ){
 	/* 19.2px per pixel of padding-top needed to keep content centered */
 
-    /* Dont judge my names - lonewolf */
+    /* Dont judge my nameschema - lonewolf */
 
         strokes = function() {
               var some = $( '.tan-bg, .skimaskbg, .canvas');
-        $( '.her-wrap' ).hide();
-        $( '.tan-bg' ).fadeIn( 'slow' );
-        $(some).remove();
-        $( ".buyitnow__wrap, .footer" ).fadeIn( "slow" );
         $('body').addClass('overflow-vis');
         $('.lootmob').css('float', 'none');    
         }
