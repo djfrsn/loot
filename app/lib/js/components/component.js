@@ -5,6 +5,8 @@
 
         strokes = function() {
               var some = $( '.tan-bg, .skimaskbg, .canvas');
+              setTimeout(function(){
+        $('.skimaskbg').addClass('animated fadeOut');      }, 3000)
         $('body').addClass('overflow-vis');
         $('.lootmob').css('float', 'none');    
         }
