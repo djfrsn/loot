@@ -3,22 +3,9 @@
 
     /* Dont judge my nameschema - lonewolf */
 
-        strokes = function() {
-              var some = $( '.tan-bg, .skimaskbg, .canvas');
+        
               setTimeout(function(){
-        $('.skimaskbg').addClass('animated fadeOut');      }, 3000)
-        $('body').addClass('overflow-vis');
-        $('.lootmob').css('float', 'none');    
-        }
-
-        $( '.a-her' ).click(function() {
-            strokes();
-        })
-
-        var delay = 3000;
-        setTimeout(function(){
-        strokes().fadeIn("slow");
-        }, delay);
+        $('.skimask').addClass('animated fadeOut');      }, 3000)
 
         var icons = $('.fa-instagram, .fa-envelope');
         var mql = window.matchMedia('(min-width: 360px)');
