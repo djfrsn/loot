@@ -5,7 +5,7 @@
 
         
               setTimeout(function(){
-        $('.skimask').addClass('animated fadeOut');      }, 3000)
+        $('.skimask').fadeOut();      }, 3000)
 
         var icons = $('.fa-instagram, .fa-envelope');
         var mql = window.matchMedia('(min-width: 360px)');
