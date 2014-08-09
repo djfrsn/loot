@@ -4,8 +4,7 @@
     /* Dont judge my nameschema - lonewolf */
 
         
-              setTimeout(function(){
-        $('.skimask').fadeOut();      }, 3000)
+              setTimeout(function(){ $('.skimask').fadeOut( 600 ); }, 3000)
 
         var icons = $('.fa-instagram, .fa-envelope');
         var mql = window.matchMedia('(min-width: 360px)');
