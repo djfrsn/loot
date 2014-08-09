@@ -4,8 +4,10 @@
     /* Dont judge my nameschema - lonewolf */
 
         
-              setTimeout(function(){ $('.skimask').fadeOut( 600 ); }, 3000)
-
+              setTimeout(function(){ $('.skimaskbg').fadeOut( 600 ); }, 3000)
+              setTimeout(function(){
+              $('.canvas').load('lib/include/body/loot.html').fadeIn( 600 );
+          }, 3600)
         var icons = $('.fa-instagram, .fa-envelope');
         var mql = window.matchMedia('(min-width: 360px)');
         var mqs = window.matchMedia('(min-width: 1px)');
