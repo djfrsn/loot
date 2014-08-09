@@ -175,9 +175,6 @@ body {
 // Add Water globals here
 
 	@include respond-to(break-0-landscape) {
-		.lootmob {
-			float: left;
-		}
 		.footer {
 			margin-bottom: 40px;
 		}
@@ -186,9 +183,6 @@ body {
 		}
 	}
 	@include respond-to(break-1-landscape) {
-		.lootmob {
-			float: left;
-		}
 		.footer {
 			margin-bottom: 75px;
 		}
@@ -451,7 +445,7 @@ body {
 		height: 590px;
 		}	
 		.lootmob {
-		padding-top: 95px;
+		padding-top: 35px;
 		margin-bottom: 0;
 		height: 1px;
 		@include font-size(4.6);
@@ -527,7 +521,7 @@ body {
 		height: 630px;
 		}			
 		.lootmob {
-		padding-top: 115px;
+		padding-top: 45px;
 		margin-bottom: 0;
 		height: 1px;
 		@include font-size(4.6);
@@ -665,7 +659,7 @@ body {
 		height: 500px;
 		}	
 		.lootmob {
-		padding-top: 95px;
+		padding-top: 35px;
 		margin-bottom: 0;
 		height: 1px;
 		@include font-size(4.6);
@@ -741,7 +735,7 @@ body {
 		height: 640px;
 		}	
 		.lootmob {
-		padding-top: 95px;
+		padding-top: 35px;
 		margin-bottom: 0;
 		height: 1px;
 		@include font-size(4.6);
@@ -817,7 +811,7 @@ body {
 		height: 660px;
 		}	
 		.lootmob {
-		padding-top: 95px;
+		padding-top: 35px;
 		margin-bottom: 0;
 		height: 1px;
 		@include font-size(4.6);
@@ -893,7 +887,7 @@ body {
 		height: 870px;
 		}	
 		.lootmob {
-		padding-top: 95px;
+		padding-top: 35px;
 		margin-bottom: 0;
 		height: 1px;
 		@include font-size(4.6);
