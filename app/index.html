@@ -1,38 +1,87 @@
-<div class="buyitnow__wrap hide">
+<!doctype html>
+<html>
 
-            <div class="line"></div>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <title>Studi˚</title>
 
-            <p class="buyitnow__sub-title">Black 'love hurts' tee</p>
-    
-            <div class="lovehurtstee_img"></div>
-    
-            <div class="price__flag">$15.00</div>
+    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+    <!--
+    <link rel="canonical" href="http://www.example.com/">
+    -->
 
-            <div class="buyitnow__button">
+    <!-- Critical CSS -->
+<!-- smoosh-->
+<link rel="stylesheet" href="lib/styles/critical/critical.css">
+<!-- endsmoosh -->
+<!-- end above the fold css --> 
 
-                <form name="_xclick" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-                    <input type="hidden" name="cmd" value="_xclick">
-                    <input type="hidden" name="business" value="me@mybusiness.com">
-                    <input type="hidden" name="currency_code" value="USD">
-                    <input type="hidden" name="item_name" value="Teddy Bear">
-                    <input type="hidden" name="amount" value="12.99">
-                    <input class="paypal__button" type="image" src="https://www.paypal.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
-                </form>
+    <script>
+function loadCSS( href, before, media ){
+	"use strict";
+	// Arguments explained:
+	// `href` is the URL for your CSS file.
+	// `before` optionally defines the element we'll use as a reference for injecting our <link>
+	// By default, `before` uses the first <script> element in the page.
+	// However, since the order in which stylesheets are referenced matters, you might need a more specific location in your document.
+	// If so, pass a different reference element to the `before` argument and it'll insert before that instead
+	// note: `insertBefore` is used instead of `appendChild`, for safety re: http://www.paulirish.com/2011/surefire-dom-element-insertion/
+	var ss = window.document.createElement( "link" );
+	var ref = before || window.document.getElementsByTagName( "script" )[ 0 ];
+	ss.rel = "stylesheet";
+	ss.href = href;
+	// temporarily, set media to something non-matching to ensure it'll fetch without blocking render
+	ss.media = "only x";
+	// inject link
+	ref.parentNode.insertBefore( ss, ref );
+	// set media back to `all` so that the styleshet applies once it loads
+	setTimeout( function(){
+		ss.media = media || "all";
+	} );
+	return ss;
+ }
+ loadCSS( "lib/styles/paint.css" );
+ </script>
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">  
 
-            </div>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-XXXXX-X');
+        ga('send', 'pageview');
+    </script>
+-->
 
-            <div class="line1"></div>
-        
-    </div>
+</head>
 
-    <footer class="footer hide">
-            
-        <a href="http://instagram.com/lootmobclothing" target="_blank"><i class="fa fa-instagram"></i></a>
+<body>
 
-        <a href="mailto:lootmobinc@gmail.com"><i class="fa fa-envelope"></i></a>
+    <!-- Add your site or app content here -->
 
-        <p class="copyright">Loot Mob © 2014</p>
+    <div class="canvas skimaskbg">
+	<h1 class="lootmob">lootmob</h1>
+</div> 
 
-    </footer>
+    <!-- Built with love using Studi˚ -->
 
-    <div class="tan-bg hide"></div>
+    <script type="text/javascript" src="lib/js/brush/brush.js" async></script>
+
+
+</body>
+
+</html>
