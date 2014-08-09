@@ -31,6 +31,9 @@ body {
 /* Background
 */
 .skimaskbg {
+	position: absolute;
+	bottom: 0;
+	z-index: -1;
 	height: 583px;
 	width: 100%;
 	background: url("../img/skimaskbg.jpg") no-repeat center center fixed; 
@@ -57,6 +60,7 @@ body {
 */
 
 .lootmob { 
+	z-index: 8; 
 	padding-top: 25px; /* Used to control overall vert position of body contents after skimaskbg click */
 	margin: 0 0 20px;
 	text-shadow: 0px 1px 0px #e5e5ee;

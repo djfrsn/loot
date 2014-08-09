@@ -238,7 +238,7 @@ body { font-size: 62.5%; font-weight: normal; font-family: "Ubuntu", sans-serif;
 
 /* Background
 */
-.skimaskbg { height: 583px; width: 100%; background: url("../img/skimaskbg.jpg") no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.skimaskbg { position: absolute; bottom: 0; z-index: -1; height: 583px; width: 100%; background: url("../img/skimaskbg.jpg") no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
 
 /* JS Related
 */
@@ -248,7 +248,7 @@ body { font-size: 62.5%; font-weight: normal; font-family: "Ubuntu", sans-serif;
 
 /* Lootmob H1
 */
-.lootmob { padding-top: 25px; /* Used to control overall vert position of body contents after skimaskbg click */ margin: 0 0 20px; text-shadow: 0px 1px 0px #e5e5ee; font-size: 46.4px; font-size: 2.9rem; font-family: "OldSansBlack"; text-align: center; }
+.lootmob { z-index: 8; padding-top: 25px; /* Used to control overall vert position of body contents after skimaskbg click */ margin: 0 0 20px; text-shadow: 0px 1px 0px #e5e5ee; font-size: 46.4px; font-size: 2.9rem; font-family: "OldSansBlack"; text-align: center; }
 
 /* Buy it now wrap
 */
