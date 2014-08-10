@@ -6,7 +6,7 @@ $(document).ready(function( $ ) {
         
               setTimeout(function(){ $('.skimaskbg').fadeOut( 600 ); }, 3000)
               setTimeout(function(){
-              $('.canvas').load('lib/include/body/loot.html').fadeIn( 600 );
+              $('.lootHTML').load('lib/include/body/loot.html').fadeIn( 600 );
           }, 3600)
         var icons = $('.fa-instagram, .fa-envelope');
         var mql = window.matchMedia('(min-width: 360px)');
