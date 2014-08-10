@@ -1,4 +1,4 @@
-(function( $ ){
+$(document).ready(function( $ ) {
 	/* 19.2px per pixel of padding-top needed to keep content centered */
 
     /* Dont judge my nameschema - lonewolf */
@@ -16,7 +16,7 @@
                 if (mqs.matches) {
                 icons.addClass('fa-2x');
             }
-                if (mql.matches) {
+                if (mql.matches) { 
                 icons.addClass('fa-3x');
             }};
 
@@ -31,4 +31,4 @@
         }}};
 
 
-})( jQuery );
+});
