@@ -9,7 +9,7 @@ $(document).ready(function( $ ) {
               $('.lootHTML')
                 .addClass('animated fadeIn')
                 .load('lib/include/body/loot.html')
-          }, 3600)
+          }, 3650)
         var icons = $('.fa-instagram, .fa-envelope');
         var mql = window.matchMedia('(min-width: 360px)');
         var mqs = window.matchMedia('(min-width: 1px)');
