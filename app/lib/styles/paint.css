@@ -238,7 +238,7 @@ body { font-size: 62.5%; font-weight: normal; font-family: "Ubuntu", sans-serif;
 
 /* Background
 */
-.skimaskbg { position: absolute; bottom: 0; z-index: -1; height: 583px; width: 100%; background: url("../img/skimaskbg.jpg") no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.skimaskbg { position: absolute; bottom: 0; z-index: -1; height: 100%; width: 100%; background: url("../img/skimaskbg.jpg") no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
 
 /* JS Related
 */
