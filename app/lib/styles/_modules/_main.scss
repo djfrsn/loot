@@ -56,7 +56,7 @@ body {
 	height: 100%;
 	z-index: 8; 
 	padding-top: 25px; /* Used to control overall vert position of body contents after skimaskbg click */
-	margin: 0 0 20px;
+	margin: 20px 0 0;
 	text-shadow: 0px 1px 0px #e5e5ee;
 	@include font-size(2.9);
 	font-family: "OldSansBlack";
@@ -99,7 +99,7 @@ body {
 /* Buy it now wrap
 */
 .buyitnow__wrap {
-	margin: 0 auto 15px;
+	margin: 20px auto 15px;
 	width: 210px;
 	height: 280px;
 }
@@ -183,9 +183,109 @@ body {
 
 // Add Water here
 @include respond-to(medium-screen) {
-	
+.lootmob {  
+	padding-top: 25px; /* Used to control overall vert position of body contents after skimaskbg click */
+	margin: 20px 0 0;
+	@include font-size(2.9);
+}
+/* Buy it now wrap
+*/
+.buyitnow__wrap {
+	margin: 20px auto 15px;
+	width: 210px;
+	height: 280px;
+}
+.buyitnow__title { 
+	@include font-size(3.3); 
+	 }
+.buyitnow__sub-title { 
+	@include font-size(1); 
+	margin: 15px 0 15px; 
+	}
+.lovehurtstee_img {
+	margin: 0 auto 20px;
+	background: url("../img/lovehurtstee_150.jpg");
+	width: 150px;
+	height: 150px;
 }
 
-@include respond-to(large-screen) {
-	
+.price__flag {
+	@include font-size(1.5);
+	margin: 0 0 0 5px;
+	width: 100px;
 }
+.buyitnow__button {
+	margin: 0 0 20px;
+	@include font-size(2);
+}
+.paypal__button {
+	width: 100px;
+}
+/* Footer 
+*/
+.fa {
+	color: $secondary;
+	margin: 0 0 20px;
+}
+.fa-envelope {
+	margin-left: 20px;
+}
+.copyright {
+	margin: 0;
+	@include font-size(.85);
+}	
+} // End medium-screen mq
+
+@include respond-to(large-screen) {
+.lootmob {  
+	padding-top: 25px; /* Used to control overall vert position of body contents after skimaskbg click */
+	margin: 20px 0 0;
+	@include font-size(2.9);
+}
+/* Buy it now wrap
+*/
+.buyitnow__wrap {
+	margin: 20px auto 15px;
+	width: 210px;
+	height: 280px;
+}
+.buyitnow__title { 
+	@include font-size(3.3); 
+	 }
+.buyitnow__sub-title { 
+	@include font-size(1); 
+	margin: 15px 0 15px; 
+	}
+.lovehurtstee_img {
+	margin: 0 auto 20px;
+	background: url("../img/lovehurtstee_150.jpg");
+	width: 150px;
+	height: 150px;
+}
+
+.price__flag {
+	@include font-size(1.5);
+	margin: 0 0 0 5px;
+	width: 100px;
+}
+.buyitnow__button {
+	margin: 0 0 20px;
+	@include font-size(2);
+}
+.paypal__button {
+	width: 100px;
+}
+/* Footer 
+*/
+.fa {
+	color: $secondary;
+	margin: 0 0 20px;
+}
+.fa-envelope {
+	margin-left: 20px;
+}
+.copyright {
+	margin: 0;
+	@include font-size(.85);
+}		
+} // End large-screen mq
