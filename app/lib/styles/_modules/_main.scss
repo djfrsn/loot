@@ -182,3 +182,10 @@ body {
 /* Water - Response System */
 
 // Add Water here
+@include respond-to(medium-screen) {
+	
+}
+
+@include respond-to(large-screen) {
+	
+}

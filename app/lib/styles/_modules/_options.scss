@@ -21,27 +21,7 @@ $base-font-family : 'Ubuntu', sans-serif;
 /*  Water 
 */
 
-$tiny-palm-max-width : 319px;
-$palm-min-width      : 360px;
-$palm-max-width      : 479px;
-$break-0-max-height  : 450px;
-$break-0-landscape   : 560px;
-$lrg-palm-min-width  : 480px;
-$lrg-palm-max-width  : 580px;
-$break-1-max-height  : 650px;
-$break-1-landscape   : 768px;
-$tiny-lap-min-width  : 581px;
-$tiny-lap-max-width  : 767px;
-$lap-min-width       : 768px;
-$lap-max-width       : 959px;
-$break-2-landscape   : 1024px;
-$lrg-lap-min-width   : 960px;
-$lrg-lap-max-width   : 1152px;
-$desk-min-width      : 1153px;
-$desk-max-width      : 1440px;
-$lrg-desk-min-width  : 1441px;
-$lrg-desk-max-width  : 1921px;
-$xlrg-desk-min-width : 1922px;
+
 /* We can just use layouts from say lrg-lap for lrg-palm landscape that
 way we don't need to device test for those widths... */
 

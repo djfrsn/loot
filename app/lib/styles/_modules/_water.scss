@@ -17,46 +17,12 @@
 // Large Desk = > 1441px
 
 @mixin respond-to($media) {
-	@if $media == tiny-palm {
-		@media only screen and (max-width: $tiny-palm-max-width) and (orientation: portrait) { @content; }
+	@if $media == medium-screen {
+		@media only screen and (min-width: 768px) and (max-width: 1024px) { @content; }
 	}
-	@if $media == palm {
-		@media only screen and (min-width: $palm-min-width) and (max-width: $palm-max-width) and (orientation: portrait) { @content; }
+	@if $media == large-screen {
+		@media only screen and (min-width: 1025px) { @content; }
 	}
-	@else if $media == break-0-landscape {
-		@media only screen and (max-height: $break-0-max-height) and (min-width: $break-0-landscape) and (orientation: landscape) { @content; }
-	}
-	@else if $media == lrg-palm {
-		@media only screen and (min-width: $lrg-palm-min-width) and (max-width: $lrg-palm-max-width) and (orientation: portrait) { @content; }
-	}
-	@else if $media == iPhone5 {
-		@media only screen and (min-device-height : 568px) and (min-device-pixel-ratio : 2) { @content; }
-	}
-	@else if $media == break-1-landscape {
-		@media only screen and (max-height: $break-1-max-height) and (min-width: $break-1-landscape) and (orientation: landscape) { @content; }
-	}
-	@else if $media == tiny-lap {
-		@media only screen and (min-width: $tiny-lap-min-width) and (max-width: $tiny-lap-max-width) and (orientation: portrait) { @content; }		
-	}
-	@else if $media == lap {
-		@media only screen and (min-width: $lap-min-width) and (max-width: $lap-max-width) { @content; }		
-	}
-	@else if $media == break-2-landscape {
-		@media only screen and (min-width: $break-2-landscape) and (orientation: landscape) { @content; }		
-	}
-	@else if $media == lrg-lap {
-		@media only screen and (min-width: $lrg-lap-min-width) and (max-width: $lrg-lap-max-width) { @content; }		
-	}
-	@else if $media == desk {
-		@media only screen and (min-width: $desk-min-width) and (max-width: $desk-max-width) { @content; }
-	}
-	@else if $media == lrg-desk {
-		@media only screen and (min-width: $lrg-desk-min-width) and (max-width: $desk-max-width) { @content; }
-	}
-	@else if $media == xlrg-desk {
-		@media only screen and (min-width: $xlrg-desk-min-width) { @content; }
-	}
-
 }
 
 
