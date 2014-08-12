@@ -186,14 +186,14 @@ body {
 .lootmob {  
 	padding-top: 25px; /* Used to control overall vert position of body contents after skimaskbg click */
 	margin: 20px 0 0;
-	@include font-size(2.9);
+	@include font-size(4.3);
 }
 /* Buy it now wrap
 */
 .buyitnow__wrap {
 	margin: 20px auto 15px;
-	width: 210px;
-	height: 280px;
+	width: 340px;
+	height: 410px;
 }
 .buyitnow__title { 
 	@include font-size(3.3); 
@@ -220,6 +220,12 @@ body {
 }
 .paypal__button {
 	width: 100px;
+}
+.line {
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 100, from(#000), to(#efead4));
+}
+.line1 {
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 100, from(#000), to(#efead4));
 }
 /* Footer 
 */
@@ -274,6 +280,12 @@ body {
 }
 .paypal__button {
 	width: 100px;
+}
+.line {
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 100, from(#000), to(#efead4));
+}
+.line1 {
+   background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 100, from(#000), to(#efead4));
 }
 /* Footer 
 */
