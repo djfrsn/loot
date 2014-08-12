@@ -195,11 +195,8 @@ body {
 	width: 340px;
 	height: 410px;
 }
-.buyitnow__title { 
-	@include font-size(3.3); 
-	 }
 .buyitnow__sub-title { 
-	@include font-size(1); 
+	@include font-size(1.9); 
 	margin: 15px 0 15px; 
 	}
 .lovehurtstee_img {
@@ -222,10 +219,10 @@ body {
 	width: 100px;
 }
 .line {
-    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 100, from(#000), to(#efead4));
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 141, from(#000), to(#efead4));
 }
 .line1 {
-    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 100, from(#000), to(#efead4));
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 141, from(#000), to(#efead4));
 }
 /* Footer 
 */
@@ -255,9 +252,6 @@ body {
 	width: 210px;
 	height: 280px;
 }
-.buyitnow__title { 
-	@include font-size(3.3); 
-	 }
 .buyitnow__sub-title { 
 	@include font-size(1); 
 	margin: 15px 0 15px; 
