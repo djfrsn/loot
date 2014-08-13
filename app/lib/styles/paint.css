@@ -291,14 +291,14 @@ body { font-size: 62.5%; font-weight: normal; font-family: "Ubuntu", sans-serif;
 .copyright { margin: 0; font-size: 13.6px; font-size: 0.85rem; }
 
 /* Water - Response System */
-@media only screen and (min-width: 768px) and (max-width: 1024px) { .lootmob { padding-top: 25px; /* Used to control overall vert position of body contents after skimaskbg click */ margin: 20px 0 0; font-size: 68.8px; font-size: 4.3rem; }
+@media only screen and (min-width: 768px) and (max-width: 1024px) { .lootmob { padding-top: 20px; /* Used to control overall vert position of body contents after skimaskbg click */ margin: 20px 0 0; font-size: 68.8px; font-size: 4.3rem; }
   /* Buy it now wrap */
-  .buyitnow__wrap { margin: 20px auto 15px; width: 340px; height: 410px; }
-  .buyitnow__sub-title { font-size: 30.4px; font-size: 1.9rem; margin: 15px 0 15px; }
-  .lovehurtstee_img { margin: 0 auto 20px; background: url("../img/lovehurtstee_150.jpg"); width: 150px; height: 150px; }
-  .price__flag { font-size: 24px; font-size: 1.5rem; margin: 0 0 0 5px; width: 100px; }
-  .buyitnow__button { margin: 0 0 20px; font-size: 32px; font-size: 2rem; }
-  .paypal__button { width: 100px; }
+  .buyitnow__wrap { margin: 20px auto 20px; width: 340px; height: 337px; }
+  .buyitnow__sub-title { font-size: 22.4px; font-size: 1.4rem; margin: 15px 0 15px; }
+  .lovehurtstee_img { margin: 0 auto 20px; background: url("../img/lovehurtstee_200.jpg"); width: 200px; height: 200px; }
+  .price__flag { font-size: 28px; font-size: 1.75rem; margin-left: 55px; width: 100px; }
+  .buyitnow__button { margin: 0 35px 20px 0; font-size: 32px; font-size: 2rem; }
+  .paypal__button { width: 115px; }
   .line { background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 141, from(black), to(#efead4)); }
   .line1 { background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 141, from(black), to(#efead4)); }
   /* Footer  */
