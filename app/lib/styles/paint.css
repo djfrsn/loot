@@ -288,7 +288,7 @@ body { font-size: 62.5%; font-weight: normal; font-family: "Ubuntu", sans-serif;
 
 .fa-envelope { margin-left: 20px; }
 
-.copyright { margin: 0; font-size: 13.6px; font-size: 0.85rem; }
+.copyright { margin: 0; font-size: 12.8px; font-size: 0.8rem; }
 
 /* Water - Response System */
 @media only screen and (min-width: 768px) and (max-width: 1024px) { .lootmob { padding-top: 20px; /* Used to control overall vert position of body contents after skimaskbg click */ margin: 20px 0 0; font-size: 68.8px; font-size: 4.3rem; }
@@ -303,6 +303,7 @@ body { font-size: 62.5%; font-weight: normal; font-family: "Ubuntu", sans-serif;
   .line1 { background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 141, from(black), to(#efead4)); }
   /* Footer  */
   .fa { color: #272220; margin: 0 0 20px; }
+  .fa-2x { font-size: 2.45em !important; }
   .fa-envelope { margin-left: 20px; }
   .copyright { margin: 0; font-size: 13.6px; font-size: 0.85rem; } }
 @media only screen and (min-width: 1025px) { .lootmob { padding-top: 25px; /* Used to control overall vert position of body contents after skimaskbg click */ margin: 20px 0 0; font-size: 46.4px; font-size: 2.9rem; }
@@ -318,7 +319,7 @@ body { font-size: 62.5%; font-weight: normal; font-family: "Ubuntu", sans-serif;
   /* Footer  */
   .fa { color: #272220; margin: 0 0 20px; }
   .fa-envelope { margin-left: 20px; }
-  .copyright { margin: 0; font-size: 13.6px; font-size: 0.85rem; } }
+  .copyright { margin: 0; font-size: 13.12px; font-size: 0.82rem; } }
 /*# sourceMappingURL=paint.css.map */
 
 /*# sourceMappingURL=paint.css.map */

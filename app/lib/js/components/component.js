@@ -9,28 +9,5 @@ $(document).ready(function( $ ) {
               $('.lootHTML')
                 .addClass('animated fadeIn')
                 .load('lib/include/body/loot.html')
-          }, 3650)
-        var icons = $('.fa-instagram, .fa-envelope');
-        var mql = window.matchMedia('(min-width: 360px)');
-        var mqs = window.matchMedia('(min-width: 1px)');
-
-        window.onload = function() {
-                if (mqs.matches) {
-                icons.addClass('fa-2x');
-            }
-                if (mql.matches) { 
-                icons.addClass('fa-3x');
-            }};
-
-        window.onresize = function() {
-            if (mql.matches) {
-                icons.removeClass('fa-2x');
-                icons.addClass('fa-3x');
-            } else {
-            if (mqs.matches) {
-                icons.removeClass('fa-3x');
-                icons.addClass('fa-2x');            
-        }}};
-
-
+          }, 3650);
 });

@@ -176,7 +176,7 @@ body {
 }
 .copyright {
 	margin: 0;
-	@include font-size(.85);
+	@include font-size(0.8);
 }
 
 /* Water - Response System */
@@ -230,12 +230,15 @@ body {
 	color: $secondary;
 	margin: 0 0 20px;
 }
+.fa-2x {
+	font-size: 2.45em !important;
+}
 .fa-envelope {
 	margin-left: 20px;
 }
 .copyright {
 	margin: 0;
-	@include font-size(.85);
+	@include font-size(0.85);
 }	
 } // End medium-screen mq
 
@@ -292,6 +295,6 @@ body {
 }
 .copyright {
 	margin: 0;
-	@include font-size(.85);
+	@include font-size(0.82);
 }		
 } // End large-screen mq
