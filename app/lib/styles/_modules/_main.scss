@@ -16,7 +16,7 @@ body {
 	@include base-font-size(); /* 62.5% Baseline */
 	color: $secondary;
 	overflow: hidden;
-	text-shadow: 0px 1px 0px #e5e5ee;
+	text-shadow: 0 0.02em #fff;
 	@include background-gradient();
 }
 .canvas {
@@ -57,7 +57,7 @@ body {
 	z-index: 8; 
 	padding-top: 25px; /* Used to control overall vert position of body contents after skimaskbg click */
 	margin: 20px 0 0;
-	text-shadow: 0px 1px 0px #e5e5ee;
+	text-shadow: 0 0.02em #fff;
 	@include font-size(2.9);
 	font-family: "oldSansBlack";
 	text-align: center;
@@ -240,4 +240,20 @@ body {
 	margin: 0;
 	@include font-size(0.85);
 }	
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) { 
+  
+  .lovehurtstee_img {
+	margin: 0 auto 20px;
+	background: url("../img/lovehurtstee_275.jpg");
+	width: 275px;
+	height: 275px;
+}
+
+}
 } // End large-screen mq
