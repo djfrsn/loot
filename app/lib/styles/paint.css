@@ -246,7 +246,7 @@ body { font-size: 62.5%; font-weight: normal; font-family: "Ubuntu", sans-serif;
 
 /* Lootmob H1
 */
-.lootmob { height: 100%; z-index: 8; padding-top: 25px; /* Used to control overall vert position of body contents after skimaskbg click */ margin: 20px 0 0; text-shadow: 0 0.02em #fff; font-size: 46.4px; font-size: 2.9rem; font-family: "oldSansBlack"; text-align: center; }
+.lootmob { height: 100%; z-index: 8; padding-top: 25px; /* Used to control overall vert position of body contents after skimaskbg click */ margin: 20px 0 0; font-size: 46.4px; font-size: 2.9rem; font-family: "oldSansBlack"; text-align: center; }
 
 /* fadeIn animation
 */
