@@ -17,7 +17,7 @@ body {
 	color: $secondary;
 	overflow: hidden;
 	text-shadow: 0px 1px 0px #e5e5ee;
-	@include background-gradient(#efead4, '');
+	@include background-gradient();
 }
 .canvas {
 	width: 100%;
