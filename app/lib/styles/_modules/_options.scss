@@ -34,7 +34,13 @@ way we don't need to device test for those widths... */
 /*  !Link fonts in for production!  */
 @import url(http://fonts.googleapis.com/css?family=Ubuntu:500);
 @font-face {
-    font-family: OldSansBlack;
-    src: url(../font/OldSansBlack.ttf);
-    font-weight:400;
+    font-family: 'oldSansBlack';
+    src: url('oldsansblack-webfont.eot');
+    src: url('oldsansblack-webfont.eot?#iefix') format('embedded-opentype'),
+         url('oldsansblack-webfont.woff') format('woff'),
+         url('oldsansblack-webfont.ttf') format('truetype'),
+         url('oldsansblack-webfont.svg#oldsansblackregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
 }
