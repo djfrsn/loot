@@ -239,20 +239,4 @@ body {
 	margin: 0;
 	@include font-size(0.85);
 }	
-@media
-only screen and (-webkit-min-device-pixel-ratio: 2),
-only screen and (   min--moz-device-pixel-ratio: 2),
-only screen and (     -o-min-device-pixel-ratio: 2/1),
-only screen and (        min-device-pixel-ratio: 2),
-only screen and (                min-resolution: 192dpi),
-only screen and (                min-resolution: 2dppx) { 
-  
-  .lovehurtstee_img {
-	margin: 0 auto 20px;
-	background: url("../img/lovehurtstee_275.jpg");
-	width: 275px;
-	height: 275px;
-}
-
-}
 } // End large-screen mq

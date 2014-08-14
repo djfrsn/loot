@@ -306,7 +306,6 @@ body { font-size: 62.5%; font-weight: normal; font-family: "Ubuntu", sans-serif;
   .fa-2x { font-size: 2.45em !important; }
   .fa-envelope { margin-left: 20px; }
   .copyright { margin: 0; font-size: 13.6px; font-size: 0.85rem; } }
-@media only screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 768px) and (min--moz-device-pixel-ratio: 2), only screen and (min-width: 768px) and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-width: 768px) and (min-device-pixel-ratio: 2), only screen and (min-width: 768px) and (min-resolution: 192dpi), only screen and (min-width: 768px) and (min-resolution: 2dppx) { .lovehurtstee_img { margin: 0 auto 20px; background: url("../img/lovehurtstee_275.jpg"); width: 275px; height: 275px; } }
 /*# sourceMappingURL=paint.css.map */
 
 /*# sourceMappingURL=paint.css.map */
